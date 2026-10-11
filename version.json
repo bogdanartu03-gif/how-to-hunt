@@ -1,5 +1,6 @@
 {
-  "version": "2.4",
+  "version": "2.5",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
-  "notes": "Обвесы для оружия, гробик с вещами после смерти, карта открывается по мере ходьбы, уровни легче, 2 очка навыков за уровень, новое древо навыков."
+  "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
+  "notes": "Обновление прямо из игры: кнопка «ОБНОВИТЬ» сама скачивает и ставит новую версию. Звери дают в 1,6 раза больше опыта."
 }
