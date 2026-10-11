@@ -1,6 +1,6 @@
 {
-  "version": "2.5.1",
+  "version": "2.5.2",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
-  "notes": "Окно «Что нового» при первом запуске новой версии. Мелкие обновления теперь нумеруются как 2.5.1."
+  "notes": "Кнопка «Об авторе» в меню. Живой фон меню: всё двигается за мышью, клик по небу - падающая звезда, по луне - сова, иногда пробегает олень."
 }
