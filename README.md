@@ -1,10 +1,9 @@
 # HOW TO HUNT
 
-Мультиплеерная охота от первого лица (Godot 4.4).
+Мультиплеерная охота от первого лица (Godot 4.4). Текущая версия: **2.4**
 
-Скачать последнюю версию: [Releases](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/releases/latest)
+## Скачать
+- **Windows:** [HowToHunt_Godot.tar.xz](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz) — распакуйте (7-Zip или WinRAR) и запустите `HowToHunt.exe`
+- **Браузер:** [HowToHunt_HTML.zip](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_HTML.zip) — распакуйте и запустите `ЗАПУСТИТЬ.bat`
 
-- `HowToHunt_Godot.tar.xz` - игра для Windows (exe)
-- `HowToHunt_HTML.zip` - версия для браузера
-
-`version.json` - номер последней версии: игра проверяет его при запуске и предлагает обновиться.
+`version.json` — номер последней версии: игра проверяет его при запуске и предлагает обновиться.
