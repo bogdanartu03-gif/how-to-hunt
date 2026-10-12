@@ -3,5 +3,6 @@
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Голосовой чат в сетевой игре: по кнопке (T), всегда включён, по голосу или выключен. Много настроек: усиление микрофона и собеседников, громкость каждого игрока, по расстоянию или как рация, шумоподавление, проверка микрофона."
+  "notes": "Голосовой чат в сетевой игре: по кнопке (T), всегда включён, по голосу или выключен. Много настроек: усиление микрофона и собеседников, громкость каждого игрока, по расстоянию или как рация, шумоподавление, проверка микрофона.",
+  "apk_version": "2.8.0.1"
 }
