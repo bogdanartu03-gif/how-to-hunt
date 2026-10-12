@@ -1,7 +1,7 @@
 {
-  "version": "2.7.1",
+  "version": "2.7.2",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Оружие по порядку уровня (1-8), панель оружия внизу не закрывает мини-карту. Плюс всё из 2.7.0: новое оружие, оружейник, верстак с покраской и наклейками."
+  "notes": "Новое болото: зелёные топи с ряской, в воде вязнешь по колено, кочки тонут под ногами. Внизу всегда все 8 видов оружия."
 }
