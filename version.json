@@ -1,8 +1,8 @@
 {
-  "version": "2.9",
+  "version": "2.9.1",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9: голосовой чат с настройками (по кнопке T, всегда включён, по голосу), а на телефоне окно обновления теперь сверяет полный номер версии.",
-  "apk_version": "2.9"
+  "notes": "Версия 2.9.1: настройка «Подробные деревья» (с какого расстояния деревья детальные), снег на горах больше не мерцает, попадание по другу в сетевой игре - красная вспышка.",
+  "apk_version": "2.9.1"
 }
