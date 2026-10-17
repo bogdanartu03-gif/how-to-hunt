@@ -1,10 +1,20 @@
 # HOW TO HUNT
 
-Мультиплеерная охота от первого лица (Godot 4.4). Текущая версия: **2.9.1**
+Мультиплеерная охота от первого лица (Godot 4.4). Текущая версия: **2.9.2**
 
 ## Скачать
 - **Windows:** [HowToHunt_Godot.tar.xz](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz) — распакуйте (7-Zip или WinRAR) и запустите `HowToHunt.exe`
-- **Браузер:** [HowToHunt_HTML.zip](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_HTML.zip) — распакуйте и запустите `ЗАПУСТИТЬ.bat`
 - **Android:** [HowToHunt.apk](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk) — скачайте на телефон и откройте (разрешите установку из этого источника). Обновления ставятся поверх, сохранения остаются
+- **Mac (macOS 10.12+, Intel и Apple M1–M3):** [HowToHunt_macOS.zip](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip) — распакуйте, перенесите «HOW TO HUNT» в «Программы». Первый запуск: правый щелчок по приложению → «Открыть» → «Открыть» (приложение без платной подписи Apple). Если macOS пишет «повреждено» — в Терминале: `xattr -cr "/Applications/HOW TO HUNT.app"`
+- **iPhone / iPad:** играйте в Safari: [страница игры](https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/) → «Поделиться» → «На экран Домой» — откроется на весь экран как приложение. Для установки настоящего приложения нужен Mac с Xcode: [HowToHunt_iOS_Xcode.zip](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip) (инструкция внутри)
+- **Meta Quest 2 / 3 / 3S (VR):** [HowToHunt_Quest.apk](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk) — установка через SideQuest или Meta Quest Developer Hub (на шлеме включите режим разработчика). Игра появится в «Библиотека → Неизвестные источники»
+- **Браузер на компьютере:** [страница игры](https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/) или [HowToHunt_HTML.zip](https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_HTML.zip) — распакуйте и запустите `ЗАПУСТИТЬ.bat`
+
+### Управление в VR (Quest)
+Левый стик — ходьба (нажать стик — бег) · правый стик — поворот на 30°, вверх — прыжок, вниз — присесть ·
+правый курок — выстрел (лук: держать и отпустить) · целитесь самим контроллером ·
+A — прыжок · B — следующее оружие · X — разделать · Y — пауза/закрыть окно ·
+левый курок — действие (говорить, лавка, продать) · правый хват — сумка · нажать правый стик — нести добычу · левый хват — голосовой чат.
+Окна и меню — лазером правого контроллера (курок — нажать, стик — прокрутка). Здоровье и карта — на левом запястье.
 
 `version.json` — номер последней версии: игра проверяет его при запуске и предлагает обновиться.

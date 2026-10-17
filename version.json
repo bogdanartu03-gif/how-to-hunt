@@ -1,8 +1,12 @@
 {
-  "version": "2.9.1",
+  "version": "2.9.2",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.1: настройка «Подробные деревья» (с какого расстояния деревья детальные), снег на горах больше не мерцает, попадание по другу в сетевой игре - красная вспышка.",
-  "apk_version": "2.9.1"
+  "notes": "Версия 2.9.2: аниме-стиль графики (пробный), версии для Mac, iPhone (в Safari) и Meta Quest VR, чёткая картинка на телефоне, горы не мерцают, защита от вылета при входе в мир.",
+  "apk_version": "2.9.2",
+  "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
+  "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
+  "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
+  "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/"
 }
