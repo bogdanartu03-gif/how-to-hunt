@@ -1,0 +1,50 @@
+# Сборка приложения для iPhone (.ipa) на маке GitHub из проекта Xcode в downloads/HowToHunt_iOS_Xcode.zip.
+# Приложение собирается без подписи Apple - на телефон его ставят через Sideloadly или AltStore со своим Apple ID.
+name: iPhone build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - downloads/HowToHunt_iOS_Xcode.zip
+      - .github/workflows/ios.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ipa:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Распаковать проект Xcode
+        run: |
+          mkdir -p build_ios
+          unzip -q downloads/HowToHunt_iOS_Xcode.zip -d build_ios
+          ls build_ios
+      - name: Собрать приложение (без подписи)
+        working-directory: build_ios
+        run: |
+          xcodebuild -project HowToHunt.xcodeproj -scheme HowToHunt -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath dd \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_ENTITLEMENTS="" DEVELOPMENT_TEAM="" build | tail -40
+      - name: Упаковать .ipa
+        working-directory: build_ios
+        run: |
+          APP=$(find dd/Build/Products -maxdepth 2 -name "*.app" -type d | head -1)
+          echo "app: $APP"
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -qry ../HowToHunt_iPhone.ipa Payload
+          ls -la ../HowToHunt_iPhone.ipa
+      - name: Положить в downloads/
+        run: |
+          mv HowToHunt_iPhone.ipa downloads/HowToHunt_iPhone.ipa
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/HowToHunt_iPhone.ipa
+          git commit -m "iPhone: собранное приложение HowToHunt_iPhone.ipa [skip ci]" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
