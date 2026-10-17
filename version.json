@@ -1,10 +1,10 @@
 {
-  "version": "2.9.3",
+  "version": "2.9.4",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.3: деревья подробные на любом расстоянии, в VR (Quest) перезарядка и лук руками, тише и мягче шаги, дождь и ветер, звук окружения плавно нарастает при входе в мир.",
-  "apk_version": "2.9.3",
+  "notes": "Версия 2.9.4: VR - лук в левой руке, тетива правой, верная траектория стрелы, точный лазер-указатель, ходьба по комнате, сразу «Ультра»; оружие менее квадратное; лёгкие настройки для встроенной графики.",
+  "apk_version": "2.9.4",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
