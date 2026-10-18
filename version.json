@@ -1,14 +1,14 @@
 {
-  "version": "3.0.2",
+  "version": "3.0.3",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Телефон: исправление вылета на Adreno 8xx; VR: прицеливание на хват, сумка на стике, без пультов в руках, удобная перезарядка, обучение с кнопками шлема",
-  "apk_version": "3.0.2",
+  "notes": "VR: фовеация выключена по умолчанию - нет мигающих голубых прямоугольников на земле",
+  "apk_version": "3.0.3",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "3.0.2"
+  "quest_version": "3.0.3"
 }
