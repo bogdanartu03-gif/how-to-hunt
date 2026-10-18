@@ -1,14 +1,14 @@
 {
-  "version": "2.9.13",
+  "version": "2.9.14",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.13: следы зверей - отпечатки копыт и лап вместо чёрных квадратиков, круглые частицы вместо кубиков, в VR навыки на кнопке B, лиса и другие быстрые звери бегут плавно.",
-  "apk_version": "2.9.13",
+  "notes": "Версия 2.9.14 (путь к 3.0): плавные приклады и рукояти ружей, колчан, эхо выстрелов и звуки попаданий; плавные тела зверей, падение при смерти, ветер и чутьё зверей, водопой, 6 новых зверей.",
+  "apk_version": "2.9.14",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "2.9.13"
+  "quest_version": "2.9.14"
 }
