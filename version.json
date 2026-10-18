@@ -1,14 +1,14 @@
 {
-  "version": "2.9.12",
+  "version": "2.9.13",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.12: в VR меню и текст сразу чёткие (раньше - пока не поменяешь графику). Плюс из 2.9.11: раненый зверь погибает от потери крови, ноги шагают при ходьбе по комнате.",
-  "apk_version": "2.9.12",
+  "notes": "Версия 2.9.13: следы зверей - отпечатки копыт и лап вместо чёрных квадратиков, круглые частицы вместо кубиков, в VR навыки на кнопке B, лиса и другие быстрые звери бегут плавно.",
+  "apk_version": "2.9.13",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "2.9.12"
+  "quest_version": "2.9.13"
 }
