@@ -1,14 +1,14 @@
 {
-  "version": "2.9.8",
+  "version": "2.9.9",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.8: новые люди с реальными пропорциями (охотники и NPC) и большой редактор персонажа при первом входе в мир: пол, рост, телосложение, кожа, лицо, глаза, причёски, бороды, головные уборы, одежда и снаряжение.",
-  "apk_version": "2.9.8",
+  "notes": "Версия 2.9.9: возраст в редакторе персонажа (седина, морщины, складки), подробное лицо (ресницы, радужка с бликом, ноздри, губы, кадык), NPC разного возраста. Исправлен «пиксельный» текст при входе в игру.",
+  "apk_version": "2.9.9",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "2.9.8"
+  "quest_version": "2.9.9"
 }
