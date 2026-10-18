@@ -1,14 +1,14 @@
 {
-  "version": "2.9.6",
+  "version": "2.9.7",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.6: в VR чёткий текст сразу, без ограничения 30 кадров, подсказки с кнопками контроллеров, работают мини-игры разделки и взлома; на телефоне подсказки с кнопками экрана; модели людей без «кубиков».",
-  "apk_version": "2.9.6",
+  "notes": "Версия 2.9.7: стиль «Реализм» (как Nuclear Nightmare), фактуры дерева, металла, меха, коры и мха, пружинная отдача, походки зверей, новые модели охотников, хитбоксы по форме зверя (голова x1.6), мягкие тени, оптимизация.",
+  "apk_version": "2.9.7",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "2.9.6"
+  "quest_version": "2.9.7"
 }
