@@ -1,14 +1,14 @@
 {
-  "version": "2.9.15",
+  "version": "3.0.0",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Версия 2.9.15 (путь к 3.0): новая локация «Речная тайга» с рекой и боссом, вода с отражением леса, мокрая земля и лужи в дождь, егерь Пётр с заданиями дня и недели, журнал охотника, трофейная полка, редкие звери, NPC гуляют и сидят у костра.",
-  "apk_version": "2.9.15",
+  "notes": "HOW TO HUNT 3.0 - большое обновление: люди с реальными пропорциями и редактор персонажа, новые ружья и звери, 6 новых зверей, локация «Речная тайга», ветер и чутьё, задания егеря и журнал охотника, редкие звери, быстрые фразы и общие задания в сетевой игре, улучшенный интерфейс на телефоне.",
+  "apk_version": "3.0.0",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "2.9.15"
+  "quest_version": "3.0.0"
 }
