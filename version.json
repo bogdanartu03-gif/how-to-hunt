@@ -1,14 +1,14 @@
 {
-  "version": "4.2.4",
+  "version": "4.3.0",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "4.2.4: прицел на телефоне не дрожит (вертикальная синхронизация), игра видна игровым режимам телефонов, прокачка ~1500 опыта на 30 уровне",
-  "apk_version": "4.2.4",
+  "notes": "4.3.0: древо навыков 62 навыка и 10 рядов (до 100 уровня), 8 разных фонов главного меню",
+  "apk_version": "4.3.0",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "4.2.4"
+  "quest_version": "4.3.0"
 }
