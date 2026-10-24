@@ -1,14 +1,14 @@
 {
-  "version": "4.2.0",
+  "version": "4.2.1",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "4.2.0: качаться легче (опыта на уровень в 5-6 раз меньше), энергосбережение на телефоне, frustum culling, лёгкие люди, новое меню для телефона, звери поправлены",
-  "apk_version": "4.2.0",
+  "notes": "4.2.1: кошки на модели Quaternius Animal Pack Vol.2, орлы в небе, прицел на телефоне не дёргается",
+  "apk_version": "4.2.1",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "4.2.0"
+  "quest_version": "4.2.1"
 }
