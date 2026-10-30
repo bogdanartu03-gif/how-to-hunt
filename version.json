@@ -1,14 +1,14 @@
 {
-  "version": "4.5.0",
+  "version": "4.6.0",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt.apk",
-  "notes": "Большая оптимизация: звери и мир считаются быстрее, без рывков, тени только вблизи, пресет «Макс. производительность», мс в счётчике FPS",
-  "apk_version": "4.5.0",
+  "notes": "Новые аниме-причёски, бороды и лица, живые движения зверей, телефон не залипает на 30 FPS, SDK Яндекс Игр",
+  "apk_version": "4.6.0",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt-1.0.0/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt-1.0.0/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "4.5.0"
+  "quest_version": "4.6.0"
 }
