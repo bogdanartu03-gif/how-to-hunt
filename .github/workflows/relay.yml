@@ -1,0 +1,46 @@
+# Выкладка сервера-посредника для игры по сети (Cloudflare Workers, бесплатно).
+# Нужны секреты репозитория: CLOUDFLARE_API_TOKEN и CLOUDFLARE_ACCOUNT_ID.
+# После выкладки адрес сервера записывается в relay.json - игра читает его сама.
+name: Relay server
+on:
+  push:
+    paths: ["relay/**", ".github/workflows/relay.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check secrets
+        id: chk
+        env:
+          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$T" ]; then echo "Секрет CLOUDFLARE_API_TOKEN не добавлен - сервер не выкладываем"; echo "ok=0" >> $GITHUB_OUTPUT; else echo "ok=1" >> $GITHUB_OUTPUT; fi
+      - name: Deploy
+        id: deploy
+        if: steps.chk.outputs.ok == '1'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: relay
+          command: deploy
+      - name: Save address for the game
+        if: steps.chk.outputs.ok == '1'
+        env:
+          U: ${{ steps.deploy.outputs.deployment-url }}
+          OUT: ${{ steps.deploy.outputs.command-output }}
+        run: |
+          if [ -z "$U" ]; then U=$(echo "$OUT" | grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' | head -1); fi
+          if [ -z "$U" ]; then echo "Адрес не получен"; exit 1; fi
+          W=$(echo "$U" | sed 's#^https://#wss://#')
+          echo "{\"url\": \"$W\"}" > relay.json
+          curl -fsS "$U/health"
+          git config user.name "relay-bot"
+          git config user.email "relay-bot@users.noreply.github.com"
+          git add relay.json
+          git commit -m "Адрес сервера для игры по сети [skip ci]" || true
+          git push
