@@ -30,6 +30,11 @@ jobs:
           echo "::notice::Account ID: длина ${#ID}"
           export CLOUDFLARE_ACCOUNT_ID="$ID"
           export CLOUDFLARE_API_TOKEN=$(echo -n "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')
+          # если в секрет вставили целиком команду проверки (curl ... "Authorization: Bearer ТОКЕН") - берём из неё сам токен
+          case "$CLOUDFLARE_API_TOKEN" in *Bearer*)
+            export CLOUDFLARE_API_TOKEN=$(echo -n "$CLOUDFLARE_API_TOKEN" | sed -E 's/.*Bearer//' | grep -oE '[A-Za-z0-9_-]{20,}' | head -1)
+            echo "::notice::Токен взят из вставленной команды curl";;
+          esac
           T="$CLOUDFLARE_API_TOKEN"
           echo "::notice::Токен: длина ${#T}"
           case "$T" in *curl*|*Bearer*|*Authorization*|*http*) echo "::error::В секрет CLOUDFLARE_API_TOKEN вставлена команда/ссылка, а нужен только сам токен";; esac
