@@ -12,5 +12,8 @@ jobs:
       - name: Test
         run: |
           U=$(grep -oE 'wss://[^"]+' relay.json)
+          H=$(echo "$U" | sed 's#^wss://#https://#')
+          echo "::notice::health: $(curl -sS -m 20 $H/health 2>&1 | head -c 200)"
+          echo "::notice::upgrade: $(curl -sS -m 10 -i -H 'Upgrade: websocket' -H 'Connection: Upgrade' -H 'Sec-WebSocket-Version: 13' -H 'Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==' $H/room/ABCDEF?role=host 2>&1 | head -c 300 | tr '\r\n' '  ')"
           node relay/selftest.mjs "$U" 200 2>&1 | tee t.txt
           while IFS= read -r l; do echo "::notice::$l"; done < t.txt
