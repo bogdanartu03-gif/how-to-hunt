@@ -10,6 +10,5 @@
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "4.11.0",
-  "exe_mirror": "https://cdn.jsdelivr.net/gh/bogdanartu03-gif/how-to-hunt@v4.11.0/downloads/HowToHunt_exe.zip"
+  "quest_version": "4.11.0"
 }
