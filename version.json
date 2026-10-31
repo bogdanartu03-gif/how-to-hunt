@@ -1,14 +1,15 @@
 {
-  "version": "4.10.0",
+  "version": "4.11.0",
   "url": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_Godot.tar.xz",
   "exe_zip": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_exe.zip",
   "apk": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt.apk",
-  "notes": "Многопоточность: трава и упрощение моделей на всех ядрах, ещё больше опыта за зверей",
-  "apk_version": "4.10.0",
+  "notes": "Мир считается в отдельном потоке, F11 - полный экран, надёжное автообновление с запасными ссылками, легче на встроенной графике",
+  "apk_version": "4.11.0",
   "mac": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_macOS.zip",
   "ios_xcode": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_iOS_Xcode.zip",
   "quest": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_Quest.apk",
   "web": "https://bogdanartu03-gif.github.io/how-to-hunt/",
   "ios": "https://github.com/bogdanartu03-gif/how-to-hunt/raw/main/downloads/HowToHunt_iPhone.ipa",
-  "quest_version": "4.10.0"
+  "quest_version": "4.11.0",
+  "exe_mirror": "https://cdn.jsdelivr.net/gh/bogdanartu03-gif/how-to-hunt@v4.11.0/downloads/HowToHunt_exe.zip"
 }

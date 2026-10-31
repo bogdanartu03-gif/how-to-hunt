@@ -4,6 +4,7 @@
 name: Relay server
 on:
   push:
+    branches: [main]
     paths: ["relay/**", ".github/workflows/relay.yml"]
   workflow_dispatch:
 permissions:
