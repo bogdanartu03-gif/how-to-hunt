@@ -30,6 +30,10 @@ jobs:
           echo "::notice::Account ID: длина ${#ID}"
           export CLOUDFLARE_ACCOUNT_ID="$ID"
           export CLOUDFLARE_API_TOKEN=$(echo -n "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')
+          T="$CLOUDFLARE_API_TOKEN"
+          echo "::notice::Токен: длина ${#T}"
+          case "$T" in *curl*|*Bearer*|*Authorization*|*http*) echo "::error::В секрет CLOUDFLARE_API_TOKEN вставлена команда/ссылка, а нужен только сам токен";; esac
+          case "$T" in *[!A-Za-z0-9_-]*) echo "::error::В токене есть лишние символы (кавычки, пробелы и т.п.) - нужен только сам токен";; esac
           set +e
           npx --yes wrangler@4 whoami > who.txt 2>&1
           sed -e 's/\x1b\[[0-9;]*m//g' who.txt | grep -vE "^\s*$" | tail -12 | while IFS= read -r l; do echo "::notice::whoami: $l"; done
