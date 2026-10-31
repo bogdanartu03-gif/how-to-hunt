@@ -13,34 +13,47 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check secrets
-        id: chk
-        env:
-          T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: |
-          if [ -z "$T" ]; then echo "Секрет CLOUDFLARE_API_TOKEN не добавлен - сервер не выкладываем"; echo "ok=0" >> $GITHUB_OUTPUT; else echo "ok=1" >> $GITHUB_OUTPUT; fi
-      - name: Deploy
-        id: deploy
-        if: steps.chk.outputs.ok == '1'
-        uses: cloudflare/wrangler-action@v3
+      - uses: actions/setup-node@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: relay
-          command: deploy
-      - name: Save address for the game
-        if: steps.chk.outputs.ok == '1'
+          node-version: 22
+      - name: Deploy
         env:
-          U: ${{ steps.deploy.outputs.deployment-url }}
-          OUT: ${{ steps.deploy.outputs.command-output }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        working-directory: relay
         run: |
-          if [ -z "$U" ]; then U=$(echo "$OUT" | grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' | head -1); fi
-          if [ -z "$U" ]; then echo "Адрес не получен"; exit 1; fi
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Нет секрета CLOUDFLARE_API_TOKEN или CLOUDFLARE_ACCOUNT_ID"; exit 1
+          fi
+          # Account ID - 32 знака; частая ошибка - лишние пробелы или вставлен не тот номер
+          ID=$(echo -n "$CLOUDFLARE_ACCOUNT_ID" | tr -d '[:space:]')
+          echo "::notice::Account ID: длина ${#ID}"
+          export CLOUDFLARE_ACCOUNT_ID="$ID"
+          export CLOUDFLARE_API_TOKEN=$(echo -n "$CLOUDFLARE_API_TOKEN" | tr -d '[:space:]')
+          set +e
+          npx --yes wrangler@4 whoami > who.txt 2>&1
+          sed -e 's/\x1b\[[0-9;]*m//g' who.txt | grep -vE "^\s*$" | tail -12 | while IFS= read -r l; do echo "::notice::whoami: $l"; done
+          npx --yes wrangler@4 deploy > out.txt 2>&1
+          rc=$?
+          set -e
+          cat out.txt
+          sed -e 's/\x1b\[[0-9;]*m//g' out.txt | grep -vE "^\s*$" | tail -25 | while IFS= read -r l; do
+            if [ $rc -ne 0 ]; then echo "::error::$l"; else echo "::notice::$l"; fi
+          done
+          [ $rc -eq 0 ] || exit 1
+          U=$(grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' out.txt | head -1)
+          if [ -z "$U" ]; then echo "::error::Адрес *.workers.dev не найден (включите поддомен workers.dev в Cloudflare)"; exit 1; fi
+          echo "U=$U" >> $GITHUB_ENV
+      - name: Save address for the game
+        run: |
           W=$(echo "$U" | sed 's#^https://#wss://#')
           echo "{\"url\": \"$W\"}" > relay.json
-          curl -fsS "$U/health"
+          sleep 5
+          curl -fsS "$U/health" || echo "::warning::Сервер ещё не ответил (новый поддомен включается до нескольких минут)"
+          echo "::notice::Адрес сервера: $W"
           git config user.name "relay-bot"
           git config user.email "relay-bot@users.noreply.github.com"
           git add relay.json
           git commit -m "Адрес сервера для игры по сети [skip ci]" || true
+          git pull --rebase -q || true
           git push
