@@ -40,9 +40,21 @@ export class Room {
   }
 
   async fetch(req) {
-    const role = new URL(req.url).searchParams.get("role");
+    const qs = new URL(req.url).searchParams;
+    const role = qs.get("role");
+    const key = (qs.get("key") || "").slice(0, 40);
     const pair = new WebSocketPair();
     const [client, server] = Object.values(pair);
+    // хост переподключается (моргнул интернет), а старое соединение ещё «висит» - по ключу отдаём комнату ему
+    if (role === "host" && key) {
+      for (const [s, pid] of this.peers()) {
+        const a = s.deserializeAttachment();
+        if (pid === 1 && a.key === key) {
+          this.bye(s);
+          try { s.close(1000, "replaced"); } catch (e) {}
+        }
+      }
+    }
     const list = this.peers();
     const ids = new Set(list.map((p) => p[1]));
     this.ctx.acceptWebSocket(server);
@@ -64,7 +76,7 @@ export class Room {
         id = 2 + Math.floor(Math.random() * 0x7ffffff0);
       } while (ids.has(id));
     }
-    server.serializeAttachment({ id });
+    server.serializeAttachment(role === "host" ? { id, key } : { id });
     server.send(frame(1, id));
     for (const [s, pid] of list) {
       try {
