@@ -40,6 +40,17 @@ jobs:
           case "$T" in *curl*|*Bearer*|*Authorization*|*http*) echo "::error::В секрет CLOUDFLARE_API_TOKEN вставлена команда/ссылка, а нужен только сам токен";; esac
           case "$T" in *[!A-Za-z0-9_-]*) echo "::error::В токене есть лишние символы (кавычки, пробелы и т.п.) - нужен только сам токен";; esac
           set +e
+          # поддомен *.workers.dev: если ещё не заведён - заводим сами
+          API=https://api.cloudflare.com/client/v4/accounts/$ID/workers/subdomain
+          SUB=$(curl -sS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$API" | grep -oE '"subdomain": *"[^"]+"' | cut -d'"' -f4)
+          if [ -z "$SUB" ]; then
+            for n in howtohunt how-to-hunt howtohunt-game hth-bogdan howtohunt-$RANDOM; do
+              r=$(curl -sS -X PUT -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" --data "{\"subdomain\":\"$n\"}" "$API")
+              echo "::notice::subdomain $n: $(echo "$r" | tr -d '\n' | cut -c1-300)"
+              echo "$r" | grep -q '"success": *true' && { SUB=$n; break; }
+            done
+          fi
+          echo "::notice::Поддомен workers.dev: $SUB"
           npx --yes wrangler@4 whoami > who.txt 2>&1
           sed -e 's/\x1b\[[0-9;]*m//g' who.txt | grep -vE "^\s*$" | tail -12 | while IFS= read -r l; do echo "::notice::whoami: $l"; done
           npx --yes wrangler@4 deploy > out.txt 2>&1
